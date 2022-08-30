@@ -36,24 +36,91 @@ console.log("AWS Lambda SES Forwarder // @arithmetric // Version 5.0.0");
 //
 //   To match all email addresses matching no other mapping, use "@" as a key.
 var defaultConfig = {
-  fromEmail: "noreply@example.com",
+  fromEmail: "forwarder@languagetechnology.org",
   subjectPrefix: "",
-  emailBucket: "s3-bucket-name",
-  emailKeyPrefix: "emailsPrefix/",
+  emailBucket: "ses-autoforwarder",
+  emailKeyPrefix: "emails/",
   allowPlusSign: true,
   forwardMapping: {
-    "info@example.com": [
-      "example.john@example.com",
-      "example.jen@example.com"
+    "admin@languagedepot.org": [
+      "languagedepot_ia@sil.org"
     ],
-    "abuse@example.com": [
-      "example.jim@example.com"
+    "admin@thecombine.app": [
+      "jimgrady.jg@gmail.com",
+      "jason_naylor@sil.org"
     ],
-    "@example.com": [
-      "example.john@example.com"
+   "careers@languagetechnology.org": [
+      "tr_knight@sil.org",
+      "alex_crum@sil.org"
     ],
-    "info": [
-      "info@example.com"
+    "cert@thecombine.app": [
+      "jimgrady.jg@gmail.com",
+      "jason_naylor@sil.org"
+    ],
+    "crowdin@languagetechnology.org": [
+      "crowdin@keyman.com",
+      "ltops@sil.org"
+    ],
+    "facilities@languagetechnology.org": [
+      "alex_crum@sil.org"
+    ],
+    "issues@languageforge.org": [
+      "languageforgeissues@sil.org"
+    ],
+    "issues@hearthis.palaso.org": [
+      "hearthis_issues@sil.org"
+    ],
+    "issues@saymore.palaso.org": [
+      "saymore_issues@sil.org"
+    ],
+    "issues@scriptureforge.org": [
+      "scriptureforgeissues@sil.org"
+    ],
+    "issues@wesay.palaso.org": [
+      "wesay_issues@sil.org"
+    ],
+    "ken_mullins@languagetechnology.org": [
+      "ken_mullins@sil.org"
+    ],
+    "licensemanager@languagetechnology.org": [
+      "licensemanager_sil@sil.org",
+      "ltops@sil.org"
+    ],
+    "support@thecombine.app": [
+      "jimgrady.jg@gmail.com",
+    ],
+    "abuse": [
+      "ltops@sil.org"
+    ],
+    "admin": [
+      "ltops@sil.org"
+    ],
+    "bob": [
+      "ltops@sil.org"
+    ],
+    "domain": [
+      "ltops@sil.org"
+    ],
+    "hostmaster": [
+      "ltops@sil.org"
+    ],
+    "inventory": [
+      "ltops@sil.org"
+    ],
+    "issues": [
+      "ltops@sil.org"
+    ],
+    "operations": [
+      "ltops@sil.org"
+    ],
+    "postmaster": [
+      "ltops@sil.org"
+    ],
+    "support": [
+      "ltops@sil.org"
+    ],
+    "webmaster": [
+      "ltops@sil.org"
     ]
   }
 };
